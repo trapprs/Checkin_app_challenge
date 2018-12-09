@@ -14,3 +14,8 @@ end
 target 'CheckinAppChallenge' do
     prod_pods
 end
+
+target 'CheckinAppChallengeTests' do
+    inherit! :search_paths
+    pod 'Mockingjay'
+end
