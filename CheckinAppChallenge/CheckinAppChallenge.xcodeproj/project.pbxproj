@@ -18,6 +18,9 @@
 		E0B57B3A21BD60EC00AA3057 /* ListItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B3921BD60EC00AA3057 /* ListItems.storyboard */; };
 		E0B57B3C21BD619A00AA3057 /* Server.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B3B21BD619A00AA3057 /* Server.plist */; };
 		E0B57B3E21BD628800AA3057 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B3D21BD628800AA3057 /* Constants.swift */; };
+		E0B57B4221BD769200AA3057 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B4121BD769200AA3057 /* Event.swift */; };
+		E0B57B4421BD773100AA3057 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B4321BD773100AA3057 /* People.swift */; };
+		E0B57B4721BD78EB00AA3057 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B4621BD78EB00AA3057 /* EventsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		E0B57B3921BD60EC00AA3057 /* ListItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListItems.storyboard; sourceTree = "<group>"; };
 		E0B57B3B21BD619A00AA3057 /* Server.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Server.plist; sourceTree = "<group>"; };
 		E0B57B3D21BD628800AA3057 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E0B57B4121BD769200AA3057 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E0B57B4321BD773100AA3057 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		E0B57B4621BD78EB00AA3057 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		F58F63033E7125D250ACEC81 /* Pods-CheckinAppChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckinAppChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckinAppChallenge/Pods-CheckinAppChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +116,7 @@
 		E0B57B0A21BD5AA600AA3057 /* CheckinAppChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E0B57B3F21BD764D00AA3057 /* Models */,
 				E0B57B3021BD5F7500AA3057 /* Service */,
 				E0B57B2E21BD5F5C00AA3057 /* Features */,
 				E0B57B2B21BD5ADA00AA3057 /* Support Files */,
@@ -150,6 +157,8 @@
 		E0B57B2F21BD5F6700AA3057 /* ListItems */ = {
 			isa = PBXGroup;
 			children = (
+				E0B57B4521BD77FC00AA3057 /* Controller */,
+				E0B57B4021BD765C00AA3057 /* ViewModels */,
 				E0B57B3821BD60D700AA3057 /* Storyboard */,
 				E0B57B3321BD603700AA3057 /* ViewController */,
 			);
@@ -178,6 +187,30 @@
 				E0B57B3921BD60EC00AA3057 /* ListItems.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E0B57B3F21BD764D00AA3057 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B4121BD769200AA3057 /* Event.swift */,
+				E0B57B4321BD773100AA3057 /* People.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0B57B4021BD765C00AA3057 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0B57B4521BD77FC00AA3057 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B4621BD78EB00AA3057 /* EventsController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +371,9 @@
 				E0B57B3621BD606B00AA3057 /* ListItemsViewController.swift in Sources */,
 				E0B57B3221BD5F8B00AA3057 /* Service.swift in Sources */,
 				E0B57B3E21BD628800AA3057 /* Constants.swift in Sources */,
+				E0B57B4421BD773100AA3057 /* People.swift in Sources */,
+				E0B57B4721BD78EB00AA3057 /* EventsController.swift in Sources */,
+				E0B57B4221BD769200AA3057 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
