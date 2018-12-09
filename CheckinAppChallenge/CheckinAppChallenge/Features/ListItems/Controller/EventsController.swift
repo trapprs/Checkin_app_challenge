@@ -13,7 +13,9 @@ class EventsController {
 
     func getListOfEvents(url: String, completion: @escaping CompletionRequestAPI){
         Service.request(url: url) { (result) in
+            print(url)
             switch result {
+                
             case .success(let data):
                 do {
                     let events = try JSONDecoder().decode([Event].self, from: data)

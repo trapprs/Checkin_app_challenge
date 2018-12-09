@@ -12,6 +12,5 @@ class ListItemsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

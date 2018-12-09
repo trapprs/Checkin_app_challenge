@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct People: Codable {
+struct People: Decodable {
     var id: String
     var eventId: String
     var name: String
