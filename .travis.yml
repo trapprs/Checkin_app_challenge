@@ -6,8 +6,6 @@ sudo: false
 branches:
 only:
 - develop
-script:
-- xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
 
 language: objective-c
 podfile: Podfile
