@@ -1,0 +1,13 @@
+
+cache:
+- bundler
+
+sudo: false
+branches:
+only:
+- develop
+
+language: objective-c
+xcode_project: CheckinAppChallenge.xcodeproj # path to your xcodeproj folder
+xcode_scheme: CheckinAppChallengeTests
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
