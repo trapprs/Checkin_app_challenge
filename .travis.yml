@@ -10,6 +10,6 @@ only:
 language: objective-c
 podfile: Podfile
 
-xcode_project: CheckinAppChallenge # path to your xcodeproj folder
+xcode_workspace: CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
 xcode_scheme: CheckinAppChallengeTests
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
