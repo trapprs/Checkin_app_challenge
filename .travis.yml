@@ -11,7 +11,7 @@ script:
 
 language: objective-c
 podfile: Podfile
-install: make get-deps
+
 xcode_project: CheckinAppChallenge # path to your xcodeproj folder
 xcode_scheme: CheckinAppChallengeTests
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
