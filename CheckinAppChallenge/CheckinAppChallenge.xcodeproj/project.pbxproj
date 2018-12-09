@@ -13,6 +13,11 @@
 		E0B57B1621BD5AAA00AA3057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B1421BD5AAA00AA3057 /* LaunchScreen.storyboard */; };
 		E0B57B2121BD5AAA00AA3057 /* CheckinAppChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B2021BD5AAA00AA3057 /* CheckinAppChallengeTests.swift */; };
 		E0B57B2D21BD5B3B00AA3057 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B2C21BD5B3B00AA3057 /* podfile */; };
+		E0B57B3221BD5F8B00AA3057 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B3121BD5F8B00AA3057 /* Service.swift */; };
+		E0B57B3621BD606B00AA3057 /* ListItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B3421BD606B00AA3057 /* ListItemsViewController.swift */; };
+		E0B57B3A21BD60EC00AA3057 /* ListItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B3921BD60EC00AA3057 /* ListItems.storyboard */; };
+		E0B57B3C21BD619A00AA3057 /* Server.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B3B21BD619A00AA3057 /* Server.plist */; };
+		E0B57B3E21BD628800AA3057 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B3D21BD628800AA3057 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,11 @@
 		E0B57B2021BD5AAA00AA3057 /* CheckinAppChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinAppChallengeTests.swift; sourceTree = "<group>"; };
 		E0B57B2221BD5AAA00AA3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0B57B2C21BD5B3B00AA3057 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		E0B57B3121BD5F8B00AA3057 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		E0B57B3421BD606B00AA3057 /* ListItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewController.swift; sourceTree = "<group>"; };
+		E0B57B3921BD60EC00AA3057 /* ListItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListItems.storyboard; sourceTree = "<group>"; };
+		E0B57B3B21BD619A00AA3057 /* Server.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Server.plist; sourceTree = "<group>"; };
+		E0B57B3D21BD628800AA3057 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F58F63033E7125D250ACEC81 /* Pods-CheckinAppChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckinAppChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckinAppChallenge/Pods-CheckinAppChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +110,8 @@
 		E0B57B0A21BD5AA600AA3057 /* CheckinAppChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E0B57B3021BD5F7500AA3057 /* Service */,
+				E0B57B2E21BD5F5C00AA3057 /* Features */,
 				E0B57B2B21BD5ADA00AA3057 /* Support Files */,
 			);
 			path = CheckinAppChallenge;
@@ -121,8 +133,51 @@
 				E0B57B1221BD5AAA00AA3057 /* Assets.xcassets */,
 				E0B57B1421BD5AAA00AA3057 /* LaunchScreen.storyboard */,
 				E0B57B1721BD5AAA00AA3057 /* Info.plist */,
+				E0B57B3B21BD619A00AA3057 /* Server.plist */,
+				E0B57B3D21BD628800AA3057 /* Constants.swift */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		E0B57B2E21BD5F5C00AA3057 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B2F21BD5F6700AA3057 /* ListItems */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E0B57B2F21BD5F6700AA3057 /* ListItems */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B3821BD60D700AA3057 /* Storyboard */,
+				E0B57B3321BD603700AA3057 /* ViewController */,
+			);
+			path = ListItems;
+			sourceTree = "<group>";
+		};
+		E0B57B3021BD5F7500AA3057 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B3121BD5F8B00AA3057 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E0B57B3321BD603700AA3057 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B3421BD606B00AA3057 /* ListItemsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E0B57B3821BD60D700AA3057 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E0B57B3921BD60EC00AA3057 /* ListItems.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B57B2D21BD5B3B00AA3057 /* podfile in Resources */,
+				E0B57B3C21BD619A00AA3057 /* Server.plist in Resources */,
+				E0B57B3A21BD60EC00AA3057 /* ListItems.storyboard in Resources */,
 				E0B57B1621BD5AAA00AA3057 /* LaunchScreen.storyboard in Resources */,
 				E0B57B1321BD5AAA00AA3057 /* Assets.xcassets in Resources */,
 			);
@@ -278,6 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B57B0C21BD5AA600AA3057 /* AppDelegate.swift in Sources */,
+				E0B57B3621BD606B00AA3057 /* ListItemsViewController.swift in Sources */,
+				E0B57B3221BD5F8B00AA3057 /* Service.swift in Sources */,
+				E0B57B3E21BD628800AA3057 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
