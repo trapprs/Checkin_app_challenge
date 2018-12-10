@@ -4,10 +4,10 @@ sudo: false
 branches:
 only:
 - develop
+podfile: CheckinAppChallenge/Podfile  
 script:
  - pod install
-podfile: CheckinAppChallenge/Podfile  
 language: objective-c
-xcode_workspace: CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
+xcode_workspace: CheckinAppChallenge/CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
 xcode_scheme: CheckinAppChallengeTest
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
