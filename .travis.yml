@@ -4,9 +4,8 @@ sudo: false
 branches:
 only:
 - develop
-podfile: CheckinAppChallenge/Podfile  
 script:
- - pod install
+ - pod install --project-directory=CheckinAppChallenge 
 language: objective-c
 xcode_workspace: CheckinAppChallenge/CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
 xcode_scheme: CheckinAppChallengeTest
