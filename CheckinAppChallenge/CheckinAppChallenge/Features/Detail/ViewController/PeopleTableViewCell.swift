@@ -13,18 +13,16 @@ final class PeopleTableViewCell: UITableViewCell {
     var viewModel = PeopleViewModel()
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var peopleImageView: UIImageView!{
-        didSet {
-            peopleImageView.layer.cornerRadius = 20   
-        }
-    }
+    @IBOutlet weak var peopleImageView: UIImageView!
     var disposeBag = DisposeBag()
     
     func config(people: People) {
-        viewModel.setPeople(people: people)
-        viewModel.name.asObservable().bind(to: nameLabel.rx.text).disposed(by: self.disposeBag)
-        DispatchQueue.main.async {
-            self.viewModel.image.asObservable().bind(to: self.peopleImageView.rx.image).disposed(by: self.disposeBag)
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.viewModel.setPeople(people: people)
+            self.viewModel.name.asObservable().bind(to: self.nameLabel.rx.text).disposed(by: self.disposeBag)
+            DispatchQueue.main.async {
+                self.viewModel.image.asObservable().bind(to: self.peopleImageView.rx.image).disposed(by: self.disposeBag)
+            }
         }
     }
 }

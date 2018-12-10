@@ -17,13 +17,16 @@ final class ListItemsViewModel {
     let error = BehaviorRelay<Error?>(value: nil)
    
     func getEvents(url: String) {
-        controller.getListOfEvents(url: url) { [unowned self] (success, events, error) in
-            if success {
-                self.events.accept(events)
-            } else {
-                self.error.accept(error)
+        self.controller.getListOfEvents(url: url) { [unowned self] (success, events, error) in
+            DispatchQueue.main.async {
+                if success {
+                    self.events.accept(events)
+                } else {
+                    self.error.accept(error)
+                }
             }
         }
+        
     }
     
 }

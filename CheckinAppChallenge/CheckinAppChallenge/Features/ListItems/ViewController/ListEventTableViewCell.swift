@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListEventTableViewCell: UITableViewCell {
+final class ListEventTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var priceEventLabel: UILabel!

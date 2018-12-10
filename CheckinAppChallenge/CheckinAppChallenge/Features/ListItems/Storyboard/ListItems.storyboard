@@ -68,7 +68,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cll-m8-pQ2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Eventos" id="ayx-l7-boM"/>
+                    <navigationItem key="navigationItem" title="Eventos" id="ayx-l7-boM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="3Ot-F3-0wi"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="MnW-vP-5jC" id="l5n-X0-G1M"/>
                     </connections>

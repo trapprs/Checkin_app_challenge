@@ -35,12 +35,15 @@ final class DetailViewModel {
         longitude.accept(event.longitude)
         
         Service.requestImage(url: "\(event.image)") { [weak self] (result) in
-            DispatchQueue.main.async {
+            DispatchQueue.global(qos: .userInitiated).async {
                 guard let strongSelf = self else { return }
                
-                if let image = result.value {
-                    strongSelf.image.accept(image)
+                DispatchQueue.main.async {
+                    if let image = result.value {
+                        strongSelf.image.accept(image)
+                    }
                 }
+                
             }
         }
     }
