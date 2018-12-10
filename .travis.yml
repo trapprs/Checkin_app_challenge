@@ -1,0 +1,33 @@
+cache:
+
+- bundler
+
+
+
+
+sudo: false
+
+branches:
+
+only:
+
+- develop
+
+script:
+
+    - pod install
+
+    
+
+language: objective-c
+
+podfile: Podfile
+
+
+
+
+xcode_workspace: CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
+
+xcode_scheme: CheckinAppChallengeTest
+
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
