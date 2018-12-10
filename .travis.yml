@@ -7,7 +7,6 @@ only:
  cache: cocoapods
  podfile: CheckinAppChallenge/Podfile
  before_install:
- - gem install cocoapods # Since Travis is not always on latest version
  - pod install
 language: objective-c
 xcode_workspace: CheckinAppChallenge/CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
