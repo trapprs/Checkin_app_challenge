@@ -14,15 +14,9 @@ class ListEventTableViewCell: UITableViewCell {
     @IBOutlet weak var priceEventLabel: UILabel!
     var event: Event?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    func config(event: Event) {
+    func config(event: Event?) {
+        guard let event = event else { return }
+       
         self.event = event
         
         self.eventNameLabel.text = "\(event.title)"

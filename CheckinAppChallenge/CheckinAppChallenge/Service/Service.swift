@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Result<T> {
     case success(T)
@@ -82,6 +83,28 @@ class Service {
             }
         }
         
+        task.resume()
+        return task
+    }
+    
+    @discardableResult
+    static func requestImage(url: String, completion: @escaping (Result<UIImage>) -> Void) -> URLSessionDownloadTask? {
+        guard let URL = URL(string: url) else {
+            completion(.failure(ServiceError.invalidURL(url)))
+            return nil
+        }
+        
+        let task = URLSession.shared.downloadTask(with: URL) { url, _, error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            else if let validURL = url, let data = try? Data(contentsOf: validURL), let image = UIImage(data: data) {
+                completion(.success(image))
+            }
+            else {
+                ServiceError.fail(completion)
+            }
+        }
         task.resume()
         return task
     }
