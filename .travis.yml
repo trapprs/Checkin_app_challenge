@@ -5,9 +5,9 @@ branches:
 only:
 - develop
 cache: cocoapods
-language: Objective-C
+language: objective-c
 before_install:
- - pod install
+ - pod install --project-directory=CheckinAppChallenge 
 script:
   - xcodebuild -scheme CheckinAppChallengeTest -workspace CheckinAppChallenge/CheckinAppChallenge.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
 after_success:
