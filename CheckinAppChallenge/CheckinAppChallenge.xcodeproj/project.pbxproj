@@ -11,6 +11,8 @@
 		AFB9E87292374767F02C052C /* Pods_CheckinAppChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B97925CD5B5F51B797D66E /* Pods_CheckinAppChallengeTests.framework */; };
 		E021EBC621BF4C0C0077AB26 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021EBC521BF4C0C0077AB26 /* MapViewController.swift */; };
 		E021EBC921BF51660077AB26 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021EBC821BF51660077AB26 /* Annotation.swift */; };
+		E021EBCC21BF5E160077AB26 /* CheckinControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021EBCB21BF5E160077AB26 /* CheckinControlller.swift */; };
+		E021EBCE21BF721F0077AB26 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021EBCD21BF721F0077AB26 /* CheckinViewController.swift */; };
 		E055688B21BD983400DAC71F /* ServerStubsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E055688A21BD983400DAC71F /* ServerStubsTest.swift */; };
 		E055688D21BDAC1700DAC71F /* invalidData.json in Resources */ = {isa = PBXBuildFile; fileRef = E055688C21BDAC1700DAC71F /* invalidData.json */; };
 		E055688F21BDB6BA00DAC71F /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E055688E21BDB6BA00DAC71F /* ListItemsViewModel.swift */; };
@@ -54,6 +56,8 @@
 		2A3D210CC39B61D4DEF21656 /* Pods-CheckinAppChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckinAppChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckinAppChallenge/Pods-CheckinAppChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		E021EBC521BF4C0C0077AB26 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E021EBC821BF51660077AB26 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		E021EBCB21BF5E160077AB26 /* CheckinControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinControlller.swift; sourceTree = "<group>"; };
+		E021EBCD21BF721F0077AB26 /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		E055688A21BD983400DAC71F /* ServerStubsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStubsTest.swift; sourceTree = "<group>"; };
 		E055688C21BDAC1700DAC71F /* invalidData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalidData.json; sourceTree = "<group>"; };
 		E055688E21BDB6BA00DAC71F /* ListItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewModel.swift; sourceTree = "<group>"; };
@@ -136,6 +140,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		E021EBCA21BF5B830077AB26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E021EBCB21BF5E160077AB26 /* CheckinControlller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E055689421BDD15E00DAC71F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +160,7 @@
 		E055689A21BDE2B800DAC71F /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				E021EBCA21BF5B830077AB26 /* Controller */,
 				E05568A321BE009300DAC71F /* ViewModel */,
 				E055689C21BDE53200DAC71F /* Storyboard */,
 				E055689B21BDE52900DAC71F /* ViewController */,
@@ -161,6 +174,7 @@
 				E05568A121BDFAD800DAC71F /* DetailViewController.swift */,
 				E05568A621BE14C200DAC71F /* PeopleTableViewCell.swift */,
 				E021EBC521BF4C0C0077AB26 /* MapViewController.swift */,
+				E021EBCD21BF721F0077AB26 /* CheckinViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -472,6 +486,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CheckinAppChallenge/Pods-CheckinAppChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -479,6 +494,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -521,6 +537,7 @@
 				E05568A221BDFAD800DAC71F /* DetailViewController.swift in Sources */,
 				E021EBC921BF51660077AB26 /* Annotation.swift in Sources */,
 				E0B57B0C21BD5AA600AA3057 /* AppDelegate.swift in Sources */,
+				E021EBCE21BF721F0077AB26 /* CheckinViewController.swift in Sources */,
 				E0B57B3621BD606B00AA3057 /* ListItemsViewController.swift in Sources */,
 				E055689121BDC03B00DAC71F /* ListEventTableViewCell.swift in Sources */,
 				E055689721BDD17500DAC71F /* DoubleExtension.swift in Sources */,
@@ -534,6 +551,7 @@
 				E05568A921BE1A0300DAC71F /* PeopleViewModel.swift in Sources */,
 				E0B57B4721BD78EB00AA3057 /* EventsController.swift in Sources */,
 				E0B57B4221BD769200AA3057 /* Event.swift in Sources */,
+				E021EBCC21BF5E160077AB26 /* CheckinControlller.swift in Sources */,
 				E021EBC621BF4C0C0077AB26 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

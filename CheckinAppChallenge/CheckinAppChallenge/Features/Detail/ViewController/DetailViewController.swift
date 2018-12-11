@@ -76,4 +76,9 @@ final class DetailViewController: UIViewController {
         
 
     }
+    @IBAction func checkinButtonPressed(_ sender: UIBarButtonItem) {
+       let checkinVC = CheckinViewController()
+        navigationController?.pushViewController(checkinVC, animated: true)
+    }
+    
 }

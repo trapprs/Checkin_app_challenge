@@ -9,6 +9,7 @@ inhibit_all_warnings!
 def prod_pods
     pod 'RxSwift', '~> 4.0'
     pod 'RxCocoa', '~> 4.0'
+    pod 'Eureka', '4.2.0'
 end
 
 target 'CheckinAppChallenge' do

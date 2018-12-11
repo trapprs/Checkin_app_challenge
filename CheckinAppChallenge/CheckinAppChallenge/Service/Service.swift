@@ -64,13 +64,20 @@ enum ServiceError: Error {
 class Service {
     
     @discardableResult
-    static func request(url: String, completion: @escaping (Result<Data>) -> Void) -> URLSessionDataTask? {
+    static func request(url: String, params: [String: Any]? = nil, completion: @escaping (Result<Data>) -> Void) -> URLSessionDataTask? {
         guard let base = URL(string: url) else {
             completion(.failure(ServiceError.invalidURL(url)))
             return nil
         }
         
-        let request = URLRequest(url: base)
+        var request = URLRequest(url: base)
+      
+        if let params = params {
+            request.httpMethod = "POST"
+            let json = try! JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            request.httpBody = json
+
+        }
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
                 completion(.failure(error))

@@ -63,6 +63,20 @@ class ServerStubsTest: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
+    func testCheckin() {
+        let name = "Teste"
+        let email = "email@email.com"
+        let controller = CheckinControlller()
+        let promise = expectation(description: "Request without data")
+        controller.checkinToEvent(url: "\(serverLink)/checkin", eventId: "1", name: name, email: email) { (success, error) in
+            XCTAssert(success)
+            promise.fulfill()
+
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+
+    }
+    
     func testContant() {
         XCTAssertNotNil(serverLink)
     }
