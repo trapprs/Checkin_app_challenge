@@ -38,6 +38,7 @@
 		E0B57B4421BD773100AA3057 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B4321BD773100AA3057 /* People.swift */; };
 		E0B57B4721BD78EB00AA3057 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B57B4621BD78EB00AA3057 /* EventsController.swift */; };
 		E0B57B4921BD887D00AA3057 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E0B57B4821BD887D00AA3057 /* data.json */; };
+		E0E7B17C21BF82D80070E2D3 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7B17B21BF82D80070E2D3 /* ViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		E0B57B4321BD773100AA3057 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		E0B57B4621BD78EB00AA3057 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		E0B57B4821BD887D00AA3057 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E0E7B17B21BF82D80070E2D3 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		ED64F985B42D0DFEFC027194 /* Pods-CheckinAppChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckinAppChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckinAppChallengeTests/Pods-CheckinAppChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F58F63033E7125D250ACEC81 /* Pods-CheckinAppChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckinAppChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckinAppChallenge/Pods-CheckinAppChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 			children = (
 				E055689621BDD17500DAC71F /* DoubleExtension.swift */,
 				E05568AA21BE280500DAC71F /* Date+Extension.swift */,
+				E0E7B17B21BF82D80070E2D3 /* ViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				E055689121BDC03B00DAC71F /* ListEventTableViewCell.swift in Sources */,
 				E055689721BDD17500DAC71F /* DoubleExtension.swift in Sources */,
 				E05568AB21BE280500DAC71F /* Date+Extension.swift in Sources */,
+				E0E7B17C21BF82D80070E2D3 /* ViewController+Extension.swift in Sources */,
 				E0B57B3221BD5F8B00AA3057 /* Service.swift in Sources */,
 				E0B57B3E21BD628800AA3057 /* Constants.swift in Sources */,
 				E05568A521BE00A500DAC71F /* DetailViewModel.swift in Sources */,

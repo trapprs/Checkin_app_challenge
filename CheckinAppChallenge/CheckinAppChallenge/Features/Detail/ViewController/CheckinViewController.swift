@@ -37,7 +37,25 @@ class CheckinViewController: FormViewController {
             +++ Section()
             <<< ButtonRow() {
                 $0.title = "Confirmar"
-                
+                $0.onCellSelection({ (cell, row) in
+                    if self.form.validate() != [] {
+                        let validations = self.form.validate()
+                        var msg = ""
+                        for a in validations {
+                            msg = "\(msg) \n\(a.msg)"
+                        }
+                        self.showsAlert("os campos são obrigatórios \n\(msg)")
+                    } else {
+                        for i in self.form.allRows {
+                            guard let value = i.baseValue else {
+                                return
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                })
             }
         
     }
