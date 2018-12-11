@@ -5,8 +5,8 @@ branches:
 only:
 - develop
 cache: cocoapods
+language: Objective-C
 podfile: CheckinAppChallenge/Podfile
-language: swift
 before_install:
  - pod install
 script:
