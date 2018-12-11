@@ -31,6 +31,14 @@ final class DetailViewController: UIViewController {
 
         return viewController
     }
+    @IBAction func openMapDidPress(_ sender: UIButton) {
+        guard let latitude = self.latitude,
+              let longitude = self.longitude else { return }
+        let mapVC = MapViewController.instantiate(latitude: latitude,longitude: longitude)
+        mapVC.modalPresentationStyle = .overFullScreen
+        
+        present(mapVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08DC9E0FEF027DBA10A6593A /* Pods_CheckinAppChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AD58EB4C0DF48118D83A1D /* Pods_CheckinAppChallenge.framework */; };
 		AFB9E87292374767F02C052C /* Pods_CheckinAppChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B97925CD5B5F51B797D66E /* Pods_CheckinAppChallengeTests.framework */; };
+		E021EBC621BF4C0C0077AB26 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021EBC521BF4C0C0077AB26 /* MapViewController.swift */; };
+		E021EBC921BF51660077AB26 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021EBC821BF51660077AB26 /* Annotation.swift */; };
 		E055688B21BD983400DAC71F /* ServerStubsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E055688A21BD983400DAC71F /* ServerStubsTest.swift */; };
 		E055688D21BDAC1700DAC71F /* invalidData.json in Resources */ = {isa = PBXBuildFile; fileRef = E055688C21BDAC1700DAC71F /* invalidData.json */; };
 		E055688F21BDB6BA00DAC71F /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E055688E21BDB6BA00DAC71F /* ListItemsViewModel.swift */; };
@@ -50,6 +52,8 @@
 		04B97925CD5B5F51B797D66E /* Pods_CheckinAppChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckinAppChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AD58EB4C0DF48118D83A1D /* Pods_CheckinAppChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckinAppChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3D210CC39B61D4DEF21656 /* Pods-CheckinAppChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckinAppChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckinAppChallenge/Pods-CheckinAppChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		E021EBC521BF4C0C0077AB26 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E021EBC821BF51660077AB26 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		E055688A21BD983400DAC71F /* ServerStubsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStubsTest.swift; sourceTree = "<group>"; };
 		E055688C21BDAC1700DAC71F /* invalidData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalidData.json; sourceTree = "<group>"; };
 		E055688E21BDB6BA00DAC71F /* ListItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +128,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E021EBC721BF514B0077AB26 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E021EBC821BF51660077AB26 /* Annotation.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E055689421BDD15E00DAC71F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +160,7 @@
 			children = (
 				E05568A121BDFAD800DAC71F /* DetailViewController.swift */,
 				E05568A621BE14C200DAC71F /* PeopleTableViewCell.swift */,
+				E021EBC521BF4C0C0077AB26 /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -194,6 +207,7 @@
 		E0B57B0A21BD5AA600AA3057 /* CheckinAppChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E021EBC721BF514B0077AB26 /* Utils */,
 				E055689421BDD15E00DAC71F /* Extensions */,
 				E0B57B3F21BD764D00AA3057 /* Models */,
 				E0B57B3021BD5F7500AA3057 /* Service */,
@@ -505,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05568A221BDFAD800DAC71F /* DetailViewController.swift in Sources */,
+				E021EBC921BF51660077AB26 /* Annotation.swift in Sources */,
 				E0B57B0C21BD5AA600AA3057 /* AppDelegate.swift in Sources */,
 				E0B57B3621BD606B00AA3057 /* ListItemsViewController.swift in Sources */,
 				E055689121BDC03B00DAC71F /* ListEventTableViewCell.swift in Sources */,
@@ -519,6 +534,7 @@
 				E05568A921BE1A0300DAC71F /* PeopleViewModel.swift in Sources */,
 				E0B57B4721BD78EB00AA3057 /* EventsController.swift in Sources */,
 				E0B57B4221BD769200AA3057 /* Event.swift in Sources */,
+				E021EBC621BF4C0C0077AB26 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
