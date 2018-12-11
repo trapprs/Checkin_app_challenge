@@ -12,5 +12,5 @@ struct People: Decodable {
     var id: String
     var eventId: String
     var name: String
-    var picture: String?
+    var picture: String
 }

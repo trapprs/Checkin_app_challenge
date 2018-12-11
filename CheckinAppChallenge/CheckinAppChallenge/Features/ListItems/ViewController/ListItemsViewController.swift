@@ -18,10 +18,10 @@ class ListItemsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadValues()
+        bindTableView()
     }
     
-    func loadValues() {
+    func bindTableView() {
         self.listItemsViewModel.getEvents(url: "\(serverLink)/events")
         
         self.listItemsViewModel.events.asObservable().map { optionalEvents -> [Event] in
@@ -29,5 +29,15 @@ class ListItemsViewController: UIViewController {
             }.bind(to: tableView.rx.items(cellIdentifier: "cellEventList", cellType: ListEventTableViewCell.self)) { (index, event, cell) in
                 cell.config(event: event)
             }.disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                let cell = self?.tableView.cellForRow(at: indexPath) as? ListEventTableViewCell
+                if let event = cell?.event {
+                    let detail = DetailViewController.instantiate(event: event)
+                    self?.navigationController?.pushViewController(detail, animated: true)
+                }
+                
+            }).disposed(by: disposeBag)
     }
 }
