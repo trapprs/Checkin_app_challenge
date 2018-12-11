@@ -1,1 +1,7 @@
-# Checkin_app_challenge
+# Challenge
+
+Pods utilizados:
+- RXSwift
+- Mockingjay (para testes)
+
+
