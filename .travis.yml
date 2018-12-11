@@ -6,10 +6,9 @@ only:
 - develop
 cache: cocoapods
 language: Objective-C
-podfile: CheckinAppChallenge/Podfile
 before_install:
  - pod install
 script:
   - xcodebuild -scheme CheckinAppChallengeTest -workspace CheckinAppChallenge/CheckinAppChallenge.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t 1935942c-85a7-4abe-83c0-8c1cb3a3eb60
