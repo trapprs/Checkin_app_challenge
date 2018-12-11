@@ -8,7 +8,7 @@ cache: cocoapods
 language: objective-c
 before_install:
  - pod install --project-directory=CheckinAppChallenge 
-xcode_workspace: CheckinAppChallenge # path to your xcodeproj folder
+xcode_workspace: CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
 xcode_scheme: CheckinAppChallengeTest
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 after_success:
