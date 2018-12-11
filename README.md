@@ -1,6 +1,6 @@
 # Challenge
 
-![alt tag][https://travis-ci.org/trapprs/Checkin_app_challenge.svg?branch=develop]
+[![Build Status](https://travis-ci.org/trapprs/Checkin_app_challenge.svg?branch=develop)](https://travis-ci.org/trapprs/Checkin_app_challenge.svg?branch=develop)
 
 Pods utilizados:
 - RXSwift
