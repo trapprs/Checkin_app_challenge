@@ -8,7 +8,8 @@ only:
  podfile: CheckinAppChallenge/Podfile
  before_install:
  - pod install
-language: objective-c
-xcode_workspace: CheckinAppChallenge/CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
-xcode_scheme: CheckinAppChallengeTest
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+language: swift
+script:
+  - xcodebuild -scheme CheckinAppChallengeTest -workspace CheckinAppChallenge/CheckinAppChallenge.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
