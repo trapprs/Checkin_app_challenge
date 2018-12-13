@@ -1,6 +1,22 @@
 
-# Created by https://www.gitignore.io/api/xcode,macos,swift,objective-c
-# Edit at https://www.gitignore.io/?templates=xcode,macos,swift,objective-c
+# Created by https://www.gitignore.io/api/xcode,macos,swift,carthage,cocoapods,objective-c
+# Edit at https://www.gitignore.io/?templates=xcode,macos,swift,carthage,cocoapods,objective-c
+
+### Carthage ###
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
 
 ### macOS ###
 # General
@@ -77,7 +93,6 @@ xcuserdata/
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
 
 # fastlane
 #
@@ -175,5 +190,4 @@ playground.xcworkspace
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-
-# End of https://www.gitignore.io/api/xcode,macos,swift,objective-c
+# End of https://www.gitignore.io/api/xcode,macos,swift,carthage,cocoapods,objective-c
