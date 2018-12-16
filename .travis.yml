@@ -8,7 +8,6 @@ only:
 cache: cocoapods
 language: objective-c
 before_install:
- - CODE_SIGNING_ALLOWED=YES
  - pod install --project-directory=CheckinAppChallenge 
 xcode_workspace: CheckinAppChallenge/CheckinAppChallenge.xcworkspace # path to your xcodeproj folder
 xcode_scheme: CheckinAppChallenge
